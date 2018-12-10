@@ -3,13 +3,21 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  /*state = {
-    data: [],
+  state = {
+    
   }
 
-  componentDidMount = () => {
-    this.onFetch();
-  }*/
+  onFetch() {
+    console.log('Fetch calling');
+    fetch('http://api.openweathermap.org/data/2.5/weather?q=${this.state.searchBox},California&appid=0de82b6b4ba5d843dac44bbee4d02543')
+    .then(response => respone.json())
+    .then(data => {
+      console.log('got data -', data);
+      this.setState({
+
+      });
+    }
+  }
   
   render() {
     return (
