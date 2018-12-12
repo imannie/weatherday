@@ -28,7 +28,6 @@ class App extends React.Component {
 
       const data = await api_call.json();
       if (city && country) {
-        console.log(data);
         this.setState({
           temperature: data.main.temp,
           city: data.name,
@@ -61,6 +60,7 @@ class App extends React.Component {
             city={this.state.city}
             country={this.state.country}
             humidity={this.state.country}
+            description={this.state.description}
             error={this.state.error}
             />
         </header>
